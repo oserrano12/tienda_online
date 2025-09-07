@@ -4,29 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- Se incluye Bootstrap para estilos rápidos y responsivos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body class="bg-primary d-flex justify-content-center align-items-center min-vh-100">
+    <!-- Centra el contenido vertical y horizontalmente usando utilidades de Bootstrap -->
     <main class="d-flex justify-content-center w-100">
-        <form action="post" class=" d-flex flex-column w-50 p-3 mb-2 bg-white text-dark border border-warning-subtle rounded-5 gap-3">
-            <div class="d-flex flex-row gap-4">
-                <label for="Nombre">Ingrese su nombre</label>
+        <!-- Formulario de registro de usuario -->
+        <form action="post" class="d-flex flex-column w-50 p-3 mb-2 bg-white text-dark border border-warning-subtle rounded-5 gap-3">
+            <!-- Campos de nombre y apellidos, uno debajo del otro -->
+            <div class="d-flex flex-column gap-3">
+                <label for="Nombre">Nombre</label>
                 <input type="text" required name="nombre" id="nombre" class="form-control" tabindex="1">
-                <label for="apellidos" class="">Ingrese sus apellidos</label>
+                <label for="apellidos" class="">Apellidos</label>
                 <input type="text" required name="apellidos" id="apellidos" class="form-control" tabindex="2">
             </div>
+            <!-- Campo para correo electrónico -->
             <div class="d-flex flex-column">
                 <label for="email" class="d-flex flex-column">Escriba su correo</label>
                 <input type="email" req name="email" id="email" class="form-control" required tabindex="3">
             </div>
+            <!-- Campo para intereses del usuario -->
             <div class="d-flex flex-column">
                 <label for="comentario" class="form-label">Escriba sus intereses</label>
                 <textarea name="comentario" id="comentario" class="form-control" tabindex="4"></textarea>
             </div>
+            <!-- Selección de ciudad de residencia -->
             <div class="d-flex flex-column">
                 <label for="ciudad">Ingrese su Ciudad</label>
                 <select name="" id="" class="form-select" tabindex="5">
                     <option selected value="Seleccionar Ciudad">Seleccionar Ciudad</option>
+                    <!-- Opciones de ciudades de Colombia -->
                     <option value="Arauca">Arauca</option>
                     <option value="Armenia">Armenia</option>
                     <option value="Barranquilla">Barranquilla</option>
@@ -54,21 +62,42 @@
                     <option value="Yopal">Yopal</option>
                 </select>
             </div>
+            <!-- Campo de presupuesto, con formato de miles y sin botones de número -->
             <div class="d-flex flex-column">
-                <label for="fecha" class="form-label">Fecha de nacimiento</label>
-                <input type="date" name="fecha" id="fecha" class="form-control" tabindex="6">
+                <label for="salario" class="form-label">Presupuesto:</label>
+                <input 
+                    type="text" 
+                    name="salario" 
+                    id="salario" 
+                    class="form-control" 
+                    tabindex="7" 
+                    inputmode="numeric" 
+                    pattern="[0-9.]*"
+                    autocomplete="off"
+                    placeholder="0"
+                >
             </div>
-            <div class="d-flex flex-column">
-                <label for="" class="form-label">Presupuesto:</label>
-                <input type="number" name="salario" id="salario" class="form-control" tabindex="7">
-            </div>
+            <!-- Botones para enviar y borrar el formulario -->
             <div class="d-flex flex-row gap-4">
                 <input type="submit" value="Registrarme" class="form-control btn btn-danger" tabindex="8">
                 <input type="reset" name="" id="" value="Borrar datos" class="form-control btn btn-danger" tabindex="9">
             </div>
-            <!-- Botón volver a la página principal -->
+            <!-- Botón para volver a la página principal -->
             <a href="index.html" class="btn btn-secondary w-100 mt-2">Volver a la página principal</a>
         </form>
     </main>
+    <!-- Script para formatear el campo presupuesto con puntos de miles automáticamente -->
+    <script>
+        // Formatea el campo de presupuesto con puntos de miles
+        const salarioInput = document.getElementById('salario');
+        salarioInput.addEventListener('input', function(e) {
+            let value = salarioInput.value.replace(/\./g, '').replace(/\D/g, '');
+            if (value) {
+                salarioInput.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            } else {
+                salarioInput.value = '';
+            }
+        });
+    </script>
 </body>
 </html>
