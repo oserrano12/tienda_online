@@ -73,3 +73,24 @@ También se realizó un **boceto/wireframe** inicial para ubicar:
 ---
 
 ## 📂 Estructura del proyecto
+/proyecto-tienda-online
+│── /css
+│   └── style.css          # Estilos globales del sitio
+│
+│── /js
+│   └── (scripts.js)       # Opcional: si después agregas más funciones JS
+│
+│── /multimedia
+│   ├── lavadora_1.webp
+│   ├── HpOmen14.webp
+│   ├── AsusTUF.webp
+│   ├── RTX306012GBmsi.webp
+│   ├── Lian Li v100 ATX.webp
+│   ├── Samsung Oddyssey G55C.webp
+│   ├── Razer Basilisk v3.webp
+│   ├── MousePad Razer Gigantus V2.webp
+│   └── (otros recursos de imágenes, audio o video)
+│
+│── index.html             # Página principal (productos, categorías)
+│── login.html             # Página de registro de usuario
+│── README.md              # Documentación del proyecto
