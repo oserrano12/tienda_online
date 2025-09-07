@@ -27,80 +27,80 @@
     </nav>
     <!-- MAIN: Contenedor principal dividido en ARTICLE (contenido central) y ASIDE (barra lateral) -->
     <main class="main">
-        <!-- ARTICLE: Sección central donde está la galería de productos -->
+        <!-- ARTICLE: Sección central donde está la galería de productos.
+        Cada producto es un bloque gallery__item, ahora con tabindex="0" para ser seleccionable con Tab -->
         <article class="gallery">
-        <!-- Cada producto es un bloque gallery__item -->
-        <div class="gallery__item">
-            <img src="../multimedia/lavadora_1.webp" alt="Lavadora secadora Samsung 18kg" class="gallery__image">
-            <h2 class="gallery__title">Lavadora Secadora Samsung 18 kg</h2>
-            <p class="gallery__price">$3.700.000</p>
-        </div>
-        <div class="gallery__item">
-            <img src="../multimedia/HpOmen14.webp" alt="Producto 2" class="gallery__image">
-            <h2 class="gallery__title">Portátil HP Omen 14"</h2>
-            <p class="gallery__price">$7.999.030</p>
-        </div>
-
-        <div class="gallery__item">
-            <img src="../multimedia/AsusTUF.webp" alt="Portatil Asus TUF" class="gallery__image">
-            <h2 class="gallery__title">Portatil Asus TUF 15.6"</h2>
-            <p class="gallery__price">$4,237,623</p>
-        </div>
-        <div class="gallery__item">
-            <img src="../multimedia/RTX306012GBmsi.webp" alt="Tarjeta gráfica rtx 3060 12GB" class="gallery__image">
-            <h2 class="gallery__title">RTX 3060 12GB MSI</h2>
-            <p class="gallery__price">$1,187,960</p>
-        </div>
-        <div class="gallery__item">
-            <img src="../multimedia/Lian Li v100 ATX.webp" alt="Carcasa para pc Lian Li V100 ATX" class="gallery__image">
-            <h2 class="gallery__title">Carcasa para pc Lian Li V100 ATX</h2>
-            <p class="gallery__price">$296.960</p>
-        </div>
-        <div class="gallery__item">
-            <img src="../multimedia/Samsung Oddyssey G55C.webp" alt="Monitor Samsumg Odyssey G55C" class="gallery__image">
-            <h2 class="gallery__title">Monitor Samsumg Odyssey G55C</h2>
-            <p class="gallery__price">$871,160</p>
-        </div>
-        <div class="gallery__item">
-            <img src="../multimedia/Razer Basilisk v3.webp" alt="Mouse Razer Basilisk V3" class="gallery__image">
-            <h2 class="gallery__title">Mouse Razer Basilisk V3</h2>
-            <p class="gallery__price">$158,320</p>
-        </div>
-        <div class="gallery__item">
-            <img src="#" alt="#" class="gallery__image">
-            <h2 class="gallery__title">#</h2>
-            <p class="gallery__price">$999.999</p>
-        </div>
-        <div class="gallery__item">
-            <img src="#" alt="#" class="gallery__image">
-            <h2 class="gallery__title">#</h2>
-            <p class="gallery__price">$999.999</p>
-        </div>
-        <div class="gallery__item">
-            <img src="#" alt="#" class="gallery__image">
-            <h2 class="gallery__title">#</h2>
-            <p class="gallery__price">$999.999</p>
-        </div>
-        <div class="gallery__item">
-            <img src="#" alt="#" class="gallery__image">
-            <h2 class="gallery__title">#</h2>
-            <p class="gallery__price">$999.999</p>
-        </div>
-        <div class="gallery__item">
-            <img src="#" alt="#" class="gallery__image">
-            <h2 class="gallery__title">#</h2>
-            <p class="gallery__price">$999.999</p>
-        </div>
-    </article>
-    <!-- ASIDE: Barra lateral con información adicional, filtros, o promociones -->
+            <!-- Productos -->
+            <div class="gallery__item" tabindex="1">
+                <img src="../multimedia/lavadora_1.webp" alt="Lavadora secadora Samsung 18kg" class="gallery__image">
+                <h2 class="gallery__title">Lavadora Secadora Samsung 18 kg</h2>
+                <p class="gallery__price">$3.700.000</p>
+            </div>
+            <div class="gallery__item" tabindex="2">
+                <img src="../multimedia/HpOmen14.webp" alt="Producto 2" class="gallery__image">
+                <h2 class="gallery__title">Portátil HP Omen 14"</h2>
+                <p class="gallery__price">$7.999.030</p>
+            </div>
+            <div class="gallery__item" tabindex="3">
+                <img src="../multimedia/AsusTUF.webp" alt="Portatil Asus TUF" class="gallery__image">
+                <h2 class="gallery__title">Portatil Asus TUF 15.6"</h2>
+                <p class="gallery__price">$4,237,623</p>
+            </div>
+            <div class="gallery__item" tabindex="4">
+                <img src="../multimedia/RTX306012GBmsi.webp" alt="Tarjeta gráfica rtx 3060 12GB" class="gallery__image">
+                <h2 class="gallery__title">RTX 3060 12GB MSI</h2>
+                <p class="gallery__price">$1,187,960</p>
+            </div>
+            <div class="gallery__item" tabindex="5">
+                <img src="../multimedia/Lian Li v100 ATX.webp" alt="Carcasa para pc Lian Li V100 ATX" class="gallery__image">
+                <h2 class="gallery__title">Carcasa para pc Lian Li V100 ATX</h2>
+                <p class="gallery__price">$296.960</p>
+            </div>
+            <div class="gallery__item" tabindex="6">
+                <img src="../multimedia/Samsung Oddyssey G55C.webp" alt="Monitor Samsumg Odyssey G55C" class="gallery__image">
+                <h2 class="gallery__title">Monitor Samsumg Odyssey G55C</h2>
+                <p class="gallery__price">$871,160</p>
+            </div>
+            <div class="gallery__item" tabindex="7">
+                <img src="../multimedia/Razer Basilisk v3.webp" alt="Mouse Razer Basilisk V3" class="gallery__image">
+                <h2 class="gallery__title">Mouse Razer Basilisk V3</h2>
+                <p class="gallery__price">$158,320</p>
+            </div>
+            <div class="gallery__item" tabindex="8">
+                <img src="../multimedia/MousePad Razer Gigantus V2.webp" alt="MousePad Razer Gigantus V2" class="gallery__image">
+                <h2 class="gallery__title">MousePad Razer Gigantus V2</h2>
+                <p class="gallery__price">$39.560</p>
+            </div>
+            <div class="gallery__item" tabindex="9">
+                <img src="#" alt="#" class="gallery__image">
+                <h2 class="gallery__title">#</h2>
+                <p class="gallery__price">$999.999</p>
+            </div>
+            <div class="gallery__item" tabindex="10">
+                <img src="#" alt="#" class="gallery__image">
+                <h2 class="gallery__title">#</h2>
+                <p class="gallery__price">$999.999</p>
+            </div>
+            <div class="gallery__item" tabindex="11">
+                <img src="#" alt="#" class="gallery__image">
+                <h2 class="gallery__title">#</h2>
+                <p class="gallery__price">$999.999</p>
+            </div>
+            <div class="gallery__item" tabindex="12">
+                <img src="#" alt="#" class="gallery__image">
+                <h2 class="gallery__title">#</h2>
+                <p class="gallery__price">$999.999</p>
+            </div>
+        </article>
+        <!-- ASIDE: Barra lateral con información adicional, filtros, o promociones -->
         <aside class="aside">
-        <h3 class="aside__title">Categorías</h3>
-        <ul class="aside__list">
-            <li class="aside__item">Electrónica</li>
-            <li class="aside__item">Ropa</li>
-            <li class="aside__item">Accesorios</li>
-            <li class="aside__item">Hogar</li>
-        </ul>
+            <h3 class="aside__title">Categorías</h3>
+            <ul class="aside__list">
+                <li class="aside__item">Electrónica</li>
+                <li class="aside__item">Ropa</li>
+                <li class="aside__item">Accesorios</li>
+                <li class="aside__item">Hogar</li>
+            </ul>
         </aside>
     </main>
     <!-- FOOTER: Pie de página con información adicional -->
