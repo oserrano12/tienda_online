@@ -32,40 +32,36 @@
             padding: 2rem;
             transition: box-shadow 0.2s;
         }
-        /* Efecto hover para la caja del formulario */
         .login-form:hover {
             box-shadow: 0 12px 40px #6a11cb;
         }
-        /* Botón principal con color de fondo y texto personalizado */
+        /* Botón registrarme */
         .btn-custom-primary {
-            background: #2575fc;
+            background: #28a745;
             color: #ffffff;
             border: none;
         }
-        /* Hover para botón principal */
         .btn-custom-primary:hover {
-            background: #6a11cb;
+            background: #218838;
             color: #ffffff;
         }
-        /* Botón de reset con borde y color personalizado */
+        /* Botón borrar */
         .btn-custom-outline {
-            background: #2575fc;
-            color: #ffffff;
-            border: 2px solid #2575fc;
+            background: #ffffff;
+            color: #dc3545;
+            border: 2px solid #dc3545;
         }
-        /* Hover para botón de reset */
         .btn-custom-outline:hover {
-            background: #6a11cb;
+            background: #a71d2a;
             color: #ffffff;
-            border-color: #6a11cb;
+            border-color: #a71d2a;
         }
-        /* Botón secundario para volver, con color armonioso */
+        /* Botón para volver */
         .btn-custom-secondary {
-            background: #2575fc;
-            color: #ffffff;
+            background: #ffffff;
+            color: #6a11cb;
             border: none;
         }
-        /* Hover para botón secundario */
         .btn-custom-secondary:hover {
             background: #6a11cb;
             color: #ffffff;
@@ -157,12 +153,12 @@
             </div>
             <!-- Botones para enviar y borrar el formulario -->
             <div class="mb-3 col-12 d-flex gap-3">
-                <input type="submit" value="Registrarme" class="btn btn-custom-primary flex-fill" tabindex="8">
-                <input type="reset" value="Borrar datos" class="btn btn-custom-outline flex-fill" tabindex="9">
+                <input type="reset" value="Borrar datos" class="btn btn-custom-outline flex-fill" tabindex="8">
+                <input type="submit" value="Registrarme" class="btn btn-custom-primary flex-fill" tabindex="9">
             </div>
             <!-- Botón para volver a la página principal -->
             <div class="mb-3 col-12">
-                <a href="index.html" class="btn btn-custom-secondary w-100">Volver a la página principal</a>
+                <a href="index.html" class="btn btn-custom-secondary w-100" tabindex="10">Volver a la página principal</a>
             </div>
         </form>
     </main>
