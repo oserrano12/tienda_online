@@ -1,106 +1,126 @@
-/* Formateo básico */
+/* Formateo básico y box-sizing para todos los elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Fuente principal y colores base para el body. Usamos medidas relativas para fuente y espaciado */
 body {
-    font-family: roboto, sans-serif;
-    font-weight: 400px  ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    font-size: 1rem; /* Medida relativa para fuente base */
 }
 
-/* Definimos estilos para los titulos */
+/* Titulos con margen inferior relativo */
 h1, h2, h3 {
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
 }
 
-/* Header */
+/* Header: fondo oscuro y texto centrado, padding relativo */
 .header {
     background-color: #222;
     color: #fff;
-    padding: 1rem;
+    padding: 2vw 0;
     text-align: center;
 }
 
-/* Navegación principal */
+.header__title {
+    font-size: 2.5vw; /* Medida relativa para responsividad */
+}
+
+/* Navegación principal: barra horizontal con espacio entre enlaces */
 .nav {
     background-color: #444;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    padding: 0.5rem;
+    gap: 2vw;
+    padding: 1vw 0;
 }
 
 .nav__link {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    transition: background 0.2s;
 }
 
 .nav__link:hover {
+    background: #333;
     text-decoration: underline;
 }
 
-/* Estructura principal (main) */
+/* Estructura principal (main): grid con columnas relativas */
 .main {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
+    grid-template-columns: 2fr 1fr;
+    gap: 2vw;
+    padding: 2vw;
 }
 
-/* Galería de productos (Article) */
+/* Galería de productos (Article): grid responsivo con medidas relativas */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2vw;
 }
 
+/* Cada producto: tarjeta con sombra, padding y tamaño relativo */
 .gallery__item {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 0.5em;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.08);
     text-align: center;
     transition: transform 0.2s;
+    padding: 1em 0.5em;
+    min-width: 200px;
+    max-width: 100%;
 }
 
 .gallery__item:hover {
     transform: scale(1.03);
 }
 
+/* Imagen del producto: tamaño relativo y ajuste automático */
 .gallery__image {
     width: 100%;
-    height: 150px;
+    height: 18vw;
+    max-height: 200px;
     object-fit: contain;
 }
 
+/* Título y precio del producto con medidas relativas */
 .gallery__title {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
+    font-size: 1.1em;
+    margin: 0.5em 0;
 }
 
 .gallery__price {
     color: #e63946;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
+    font-size: 1em;
 }
 
-/* Barra lateral (Aside) */
+/* Barra lateral (Aside): tarjeta con sombra y padding relativo */
 .aside {
     background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 2vw;
+    border-radius: 0.5em;
+    box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.08);
 }
 
 .aside__title {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1em;
+    font-size: 1.2em;
 }
 
 .aside__list {
@@ -108,14 +128,47 @@ h1, h2, h3 {
 }
 
 .aside__item {
-    margin: 0.3rem 0;
+    margin: 0.5em 0;
+    font-size: 1em;
 }
 
-/* Footer */
+/* Footer: fondo oscuro, texto centrado y padding relativo */
 .footer {
     background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: 2vw 0;
+    margin-top: 2vw;
+    font-size: 1em;
+}
+
+/* Media queries para mejorar responsividad en pantallas pequeñas */
+@media (max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+    .aside {
+        margin-top: 2vw;
+    }
+    .gallery__image {
+        height: 30vw;
+        max-height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__title {
+        font-size: 6vw;
+    }
+    .gallery__image {
+        height: 40vw;
+        max-height: 120px;
+    }
+    .aside {
+        padding: 1em;
+    }
+    .main {
+        padding: 1em;
+        gap: 1em;
+    }
 }

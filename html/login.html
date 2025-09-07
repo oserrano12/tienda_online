@@ -3,38 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!-- Se incluye Bootstrap para estilos rápidos y responsivos -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Login | Tienda Online</title>
+    <!-- Bootstrap para estilos responsivos y componentes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        /* Fondo degradado para toda la página usando colores hexadecimales */
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        }
+        /* Título principal del login, color blanco y sombra para legibilidad */
+        .login-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px #2575fc;
+        }
+        /* Caja del formulario con sombra, borde redondeado y transición */
+        .login-form {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 32px #2575fc;
+            padding: 2rem;
+            transition: box-shadow 0.2s;
+        }
+        /* Efecto hover para la caja del formulario */
+        .login-form:hover {
+            box-shadow: 0 12px 40px #6a11cb;
+        }
+        /* Botón principal con color de fondo y texto personalizado */
+        .btn-custom-primary {
+            background: #2575fc;
+            color: #ffffff;
+            border: none;
+        }
+        /* Hover para botón principal */
+        .btn-custom-primary:hover {
+            background: #6a11cb;
+            color: #ffffff;
+        }
+        /* Botón de reset con borde y color personalizado */
+        .btn-custom-outline {
+            background: #2575fc;
+            color: #ffffff;
+            border: 2px solid #2575fc;
+        }
+        /* Hover para botón de reset */
+        .btn-custom-outline:hover {
+            background: #6a11cb;
+            color: #ffffff;
+            border-color: #6a11cb;
+        }
+        /* Botón secundario para volver, con color armonioso */
+        .btn-custom-secondary {
+            background: #2575fc;
+            color: #ffffff;
+            border: none;
+        }
+        /* Hover para botón secundario */
+        .btn-custom-secondary:hover {
+            background: #6a11cb;
+            color: #ffffff;
+        }
+        /* Efecto de foco para campos de entrada y select */
+        .form-control:focus, .form-select:focus, textarea:focus {
+            border-color: #2575fc;
+            box-shadow: 0 0 0 0.2rem #6a11cb;
+        }
+        /* Responsividad para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .login-form {
+                padding: 1rem;
+            }
+            .login-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
-<body class="bg-primary d-flex justify-content-center align-items-center min-vh-100">
-    <!-- Centra el contenido vertical y horizontalmente usando utilidades de Bootstrap -->
-    <main class="d-flex justify-content-center w-100">
-        <!-- Formulario de registro de usuario -->
-        <form action="post" class="d-flex flex-column w-50 p-3 mb-2 bg-white text-dark border border-warning-subtle rounded-5 gap-3">
-            <!-- Campos de nombre y apellidos, uno debajo del otro -->
-            <div class="d-flex flex-column gap-3">
-                <label for="Nombre">Nombre</label>
+<body>
+    <!-- Contenedor principal centrado vertical y horizontalmente con Bootstrap -->
+    <main class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <!-- Título de la sección login -->
+        <h1 class="login-title">Registro de Usuario</h1>
+        <!-- Formulario de registro con estilos Bootstrap y personalizados -->
+        <form action="post" class="login-form row justify-content-center text-dark border border-warning-subtle shadow">
+            <!-- Campo para el nombre del usuario -->
+            <div class="mb-3 col-12">
+                <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" required name="nombre" id="nombre" class="form-control" tabindex="1">
-                <label for="apellidos" class="">Apellidos</label>
+            </div>
+            <!-- Campo para los apellidos del usuario -->
+            <div class="mb-3 col-12">
+                <label for="apellidos" class="form-label">Apellidos</label>
                 <input type="text" required name="apellidos" id="apellidos" class="form-control" tabindex="2">
             </div>
-            <!-- Campo para correo electrónico -->
-            <div class="d-flex flex-column">
-                <label for="email" class="d-flex flex-column">Escriba su correo</label>
-                <input type="email" req name="email" id="email" class="form-control" required tabindex="3">
+            <!-- Campo para el correo electrónico -->
+            <div class="mb-3 col-12">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" required name="email" id="email" class="form-control" tabindex="3">
             </div>
-            <!-- Campo para intereses del usuario -->
-            <div class="d-flex flex-column">
-                <label for="comentario" class="form-label">Escriba sus intereses</label>
+            <!-- Campo para los intereses del usuario -->
+            <div class="mb-3 col-12">
+                <label for="comentario" class="form-label">Intereses</label>
                 <textarea name="comentario" id="comentario" class="form-control" tabindex="4"></textarea>
             </div>
-            <!-- Selección de ciudad de residencia -->
-            <div class="d-flex flex-column">
-                <label for="ciudad">Ingrese su Ciudad</label>
-                <select name="" id="" class="form-select" tabindex="5">
+            <!-- Campo para seleccionar la ciudad -->
+            <div class="mb-3 col-12">
+                <label for="ciudad" class="form-label">Ciudad</label>
+                <select name="ciudad" id="ciudad" class="form-select" tabindex="5">
                     <option selected value="Seleccionar Ciudad">Seleccionar Ciudad</option>
-                    <!-- Opciones de ciudades de Colombia -->
                     <option value="Arauca">Arauca</option>
                     <option value="Armenia">Armenia</option>
                     <option value="Barranquilla">Barranquilla</option>
@@ -62,33 +145,29 @@
                     <option value="Yopal">Yopal</option>
                 </select>
             </div>
-            <!-- Campo de presupuesto, con formato de miles y sin botones de número -->
-            <div class="d-flex flex-column">
-                <label for="salario" class="form-label">Presupuesto:</label>
-                <input 
-                    type="text" 
-                    name="salario" 
-                    id="salario" 
-                    class="form-control" 
-                    tabindex="7" 
-                    inputmode="numeric" 
-                    pattern="[0-9.]*"
-                    autocomplete="off"
-                    placeholder="0"
-                >
+            <!-- Campo para la fecha de nacimiento -->
+            <div class="mb-3 col-12">
+                <label for="fecha" class="form-label">Fecha de nacimiento</label>
+                <input type="date" name="fecha" id="fecha" class="form-control" tabindex="6">
+            </div>
+            <!-- Campo para el presupuesto, con formato de miles -->
+            <div class="mb-3 col-12">
+                <label for="salario" class="form-label">Presupuesto</label>
+                <input type="text" name="salario" id="salario" class="form-control" tabindex="7" inputmode="numeric" pattern="[0-9.]*" autocomplete="off" placeholder="0">
             </div>
             <!-- Botones para enviar y borrar el formulario -->
-            <div class="d-flex flex-row gap-4">
-                <input type="submit" value="Registrarme" class="form-control btn btn-danger" tabindex="8">
-                <input type="reset" name="" id="" value="Borrar datos" class="form-control btn btn-danger" tabindex="9">
+            <div class="mb-3 col-12 d-flex gap-3">
+                <input type="submit" value="Registrarme" class="btn btn-custom-primary flex-fill" tabindex="8">
+                <input type="reset" value="Borrar datos" class="btn btn-custom-outline flex-fill" tabindex="9">
             </div>
             <!-- Botón para volver a la página principal -->
-            <a href="index.html" class="btn btn-secondary w-100 mt-2">Volver a la página principal</a>
+            <div class="mb-3 col-12">
+                <a href="index.html" class="btn btn-custom-secondary w-100">Volver a la página principal</a>
+            </div>
         </form>
     </main>
-    <!-- Script para formatear el campo presupuesto con puntos de miles automáticamente -->
     <script>
-        // Formatea el campo de presupuesto con puntos de miles
+        // Formatea el campo de presupuesto con puntos de miles automáticamente
         const salarioInput = document.getElementById('salario');
         salarioInput.addEventListener('input', function(e) {
             let value = salarioInput.value.replace(/\./g, '').replace(/\D/g, '');

@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Vinculamos la hoja de estilos externa -->
+    <!-- Vinculamos la hoja de estilos externa para la apariencia general -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Vinculamos el estilo de fuente desde google fonts -->
+    <!-- Vinculamos el estilo de fuente desde Google Fonts para mejorar la tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Título de la página -->
+    <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Tienda Online</title>
 </head>
 <body>
-    <!-- HEADER: Contiene el título de la tienda -->
+    <!-- HEADER: Contiene el título principal de la tienda -->
     <header class="header">
         <h1 class="header__title">Tienda Online</h1>
     </header>
-    <!-- NAV: Barra de navegación principal con enlaces a secciones -->
+    <!-- NAV: Barra de navegación principal con enlaces a las distintas secciones del sitio -->
     <nav class="nav">
         <a href="#" class="nav__link">Inicio</a>
         <a href="#" class="nav__link">Productos</a>
@@ -25,12 +25,11 @@
         <a href="#" class="nav__link">Contacto</a>
         <a href="login.html" class="nav__link">Registrarse</a>
     </nav>
-    <!-- MAIN: Contenedor principal dividido en ARTICLE (contenido central) y ASIDE (barra lateral) -->
+    <!-- MAIN: Contenedor principal dividido en ARTICLE (galería de productos) y ASIDE (barra lateral) -->
     <main class="main">
-        <!-- ARTICLE: Sección central donde está la galería de productos.
-        Cada producto es un bloque gallery__item, ahora con tabindex="0" para ser seleccionable con Tab -->
+        <!-- ARTICLE: Galería de productos. Cada producto es un bloque gallery__item y es seleccionable con Tab. -->
         <article class="gallery">
-            <!-- Productos -->
+            <!-- Cada producto tiene imagen, título y precio. -->
             <div class="gallery__item" tabindex="1">
                 <img src="../multimedia/lavadora_1.webp" alt="Lavadora secadora Samsung 18kg" class="gallery__image">
                 <h2 class="gallery__title">Lavadora Secadora Samsung 18 kg</h2>
@@ -103,7 +102,7 @@
             </ul>
         </aside>
     </main>
-    <!-- FOOTER: Pie de página con información adicional -->
+    <!-- FOOTER: Pie de página con información adicional y derechos reservados -->
     <footer class="footer">
         <p class="footer__text">© 2025 Tienda Online. Todos los derechos reservados.</p>
     </footer>
