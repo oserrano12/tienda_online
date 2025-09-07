@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-primary d-flex justify-content-center align-items-center min-vh-100">
+    <main class="d-flex justify-content-center w-100">
+        <form action="" class=" d-flex flex-column w-50 p-3 mb-2 bg-white text-dark border border-warning-subtle rounded-5 gap-3">
+            
+            <div class="d-flex flex-row gap-4">
+                <label for="Nombre">Ingrese su nombre</label>
+                <input type="text" required name="nombre" id="nombre" class="form-control" tabindex="1">
+                <label for="apellidos" class="">Ingrese sus apellidos</label>
+                <input type="text" required name="apellidos" id="apellidos" class="form-control" tabindex="2">
+            </div>
+            <div class="d-flex flex-column">
+                <label for="email" class="d-flex flex-column">Escriba su correo</label>
+                <input type="email" req name="email" id="email" class="form-control" required tabindex="3">
+            </div>
+
+
+            <div class="d-flex flex-column">
+                <label for="comentario" class="form-label">Escriba sus intereses</label>
+                <textarea name="comentario" id="comentario" class="form-control" tabindex="4"></textarea>
+            </div>
+
+            <div class="d-flex flex-column">
+                <label for="ciudad">Ingrese su Ciudad</label>
+                <select name="" id="" class="form-select" tabindex="5">
+                    <option selected value="Bucaramanga">Bucaramanga</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Bogota">Bogota</option>
+                    <option value="Medellin">Medellin</option>
+                </select>
+            </div>
+
+            <div class="d-flex flex-column">
+                <label for="fecha" class="form-label">Fecha de nacimiento</label>
+                <input type="date" name="fecha" id="fecha" class="form-control" tabindex="6">
+            </div>
+
+            <div class="d-flex flex-column">
+                <label for="" class="form-label">Presupuesto:</label>
+                <input type="number" name="salario" id="salario" class="form-control" tabindex="7">
+            </div>
+
+            <div class="d-flex flex-row gap-4">
+                <input type="submit" value="Registrarme" class="form-control btn btn-danger" tabindex="8">
+                <input type="reset" name="" id="" value="Borrar datos" class="form-control btn btn-danger" tabindex="9">
+            </div>
+
+        </form>
+    </main>
+</body>
+</html>
