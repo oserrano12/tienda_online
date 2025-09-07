@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,7 @@
 </head>
 <body class="bg-primary d-flex justify-content-center align-items-center min-vh-100">
     <main class="d-flex justify-content-center w-100">
-        <form action="" class=" d-flex flex-column w-50 p-3 mb-2 bg-white text-dark border border-warning-subtle rounded-5 gap-3">
-            
+        <form action="post" class=" d-flex flex-column w-50 p-3 mb-2 bg-white text-dark border border-warning-subtle rounded-5 gap-3">
             <div class="d-flex flex-row gap-4">
                 <label for="Nombre">Ingrese su nombre</label>
                 <input type="text" required name="nombre" id="nombre" class="form-control" tabindex="1">
@@ -20,38 +19,55 @@
                 <label for="email" class="d-flex flex-column">Escriba su correo</label>
                 <input type="email" req name="email" id="email" class="form-control" required tabindex="3">
             </div>
-
-
             <div class="d-flex flex-column">
                 <label for="comentario" class="form-label">Escriba sus intereses</label>
                 <textarea name="comentario" id="comentario" class="form-control" tabindex="4"></textarea>
             </div>
-
             <div class="d-flex flex-column">
                 <label for="ciudad">Ingrese su Ciudad</label>
                 <select name="" id="" class="form-select" tabindex="5">
-                    <option selected value="Bucaramanga">Bucaramanga</option>
-                    <option value="Cali">Cali</option>
+                    <option selected value="Seleccionar Ciudad">Seleccionar Ciudad</option>
+                    <option value="Arauca">Arauca</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Barranquilla">Barranquilla</option>
                     <option value="Bogota">Bogota</option>
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Cartagena">Cartagena</option>
+                    <option value="Florencia">Florencia</option>
+                    <option value="Ibagué">Ibagué</option>
+                    <option value="Leticia">Leticia</option>
+                    <option value="Manizales">Manizales</option>
                     <option value="Medellin">Medellin</option>
+                    <option value="Mocoa">Mocoa</option>
+                    <option value="Monteria">Monteria</option>
+                    <option value="Neiva">Neiva</option>
+                    <option value="Pereira">Pereira</option>
+                    <option value="Popayan">Popayan</option>
+                    <option value="Puerto Carreño">Puerto Carreño</option>
+                    <option value="San Andrés">San Andrés</option>
+                    <option value="Santa Marta">Santa Marta</option>
+                    <option value="Sincelejo">Sincelejo</option>
+                    <option value="Tunja">Tunja</option>
+                    <option value="Valledupar">Valledupar</option>
+                    <option value="Villavicencio">Villavicencio</option>
+                    <option value="Yopal">Yopal</option>
                 </select>
             </div>
-
             <div class="d-flex flex-column">
                 <label for="fecha" class="form-label">Fecha de nacimiento</label>
                 <input type="date" name="fecha" id="fecha" class="form-control" tabindex="6">
             </div>
-
             <div class="d-flex flex-column">
                 <label for="" class="form-label">Presupuesto:</label>
                 <input type="number" name="salario" id="salario" class="form-control" tabindex="7">
             </div>
-
             <div class="d-flex flex-row gap-4">
                 <input type="submit" value="Registrarme" class="form-control btn btn-danger" tabindex="8">
                 <input type="reset" name="" id="" value="Borrar datos" class="form-control btn btn-danger" tabindex="9">
             </div>
-
+            <!-- Botón volver a la página principal -->
+            <a href="index.html" class="btn btn-secondary w-100 mt-2">Volver a la página principal</a>
         </form>
     </main>
 </body>
