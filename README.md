@@ -26,7 +26,7 @@ El objetivo es desarrollar un **mini sitio web responsivo estilo tienda online**
 ## 📂 Planificación y roles
 Según las indicaciones de la actividad:contentReference[oaicite:1]{index=1}:  
 - **Oscar Serrano**: diseñador de contenido y estructura HTML.  
-- **Ricardo [Apellido]**: diseñador de estilos CSS y coordinador de multimedia y formularios.  
+- **Ricardo Suarez**: diseñador de estilos CSS y coordinador de multimedia y formularios.  
 
 También se realizó un **boceto/wireframe** inicial para ubicar:  
 - `header`, `nav`, `main`, `article`, `aside` y `footer`.  
