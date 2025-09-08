@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Ícono de la página que aparece en la pestaña del navegador -->
-    <link rel="icon" type="image/png" sizes="32x32" href="multimedia/logo.png">
+    <link rel="icon" type="image/png" href="multimedia/logo.png">
     <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Tienda Online</title>
 </head>
@@ -29,6 +29,16 @@
         <a href="#" class="nav__link">Contacto</a>
         <a href="login.html" class="nav__link">Registrarse</a>
     </nav>
+    <!-- Figure de Articulo Destacado -->
+    <section class="figure-section">
+        <h2 class="figure-section__title">Producto Destacado</h2>
+        <figure class="custom-figure">
+            <img src="multimedia/AORUS GeForce RTX 5090 Master ICE 32G.webp" alt="Tarjeta gráfica RTX 5090 Master Ice 32GB AORUS" class="custom-figure__img">
+            <figcaption class="custom-figure__caption">
+                GIGABYTE Tarjeta gráfica AORUS GeForce RTX 5090 Master ICE 32G, sistema de refrigeración WINDFORCE, GDDR7 de 32 GB de 512 bits, tarjeta de video GV-N5090AORUSM ICE-32GD
+            </figcaption>
+        </figure>
+    </section>
     <!-- MAIN: Contenedor principal dividido en ARTICLE (galería de productos) y ASIDE (barra lateral) -->
     <main class="main">
         <!-- ARTICLE: Galería de productos. Cada producto es un bloque gallery__item y es seleccionable con Tab. -->
@@ -125,6 +135,19 @@
                     Política de privacidad | Términos y condiciones
                 </small>
             </p>
+        </div>
+        <!-- Video UTS 2025 -->
+        <div class="footer__video-container">
+            <h3 class="footer__video-title">Video destacado</h3>
+            <div class="footer__video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/WV-RNLS2Pqc"
+                    title="Video destacado Tienda Online"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
         </div>
     </footer>
 </body>
