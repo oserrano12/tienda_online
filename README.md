@@ -9,7 +9,7 @@ El objetivo es desarrollar un **mini sitio web responsivo estilo tienda online**
 
 ## 👥 Integrantes
 - **Oscar Serrano** – Estudiante de **3er semestre**  
-- **Ricardo [Apellido]** – Estudiante de **4to semestre**
+- **Ricardo Suarez** – Estudiante de **4to semestre**
 
 ---
 
