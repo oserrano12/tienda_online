@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login | Tienda Online</title>
     <!-- Bootstrap para estilos responsivos y componentes -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <style>
         /* Fondo degradado para toda la página usando colores hexadecimales */
         body {
@@ -67,9 +67,25 @@
             color: #ffffff;
         }
         /* Efecto de foco para campos de entrada y select */
-        .form-control:focus, .form-select:focus, textarea:focus {
+        .form-control:focus,
+        .form-select:focus,
+        textarea:focus {
             border-color: #2575fc;
             box-shadow: 0 0 0 0.2rem #6a11cb;
+        }
+        /* Estilo para fieldset para mejor separación visual */
+        fieldset {
+            border: 1px solid #dee2e6;
+            padding: 1rem 1.5rem 1.5rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #f8f9fa;
+        }
+        legend {
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0 0.5rem;
+            width: auto;
         }
         /* Responsividad para pantallas pequeñas */
         @media (max-width: 600px) {
@@ -89,90 +105,178 @@
         <h1 class="login-title">Registro de Usuario</h1>
         <!-- Formulario de registro con estilos Bootstrap y personalizados -->
         <form action="post" class="login-form row justify-content-center text-dark border border-warning-subtle shadow">
-            <!-- Campo para el nombre del usuario -->
-            <div class="mb-3 col-12">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" required name="nombre" id="nombre" class="form-control" tabindex="1">
-            </div>
-            <!-- Campo para los apellidos del usuario -->
-            <div class="mb-3 col-12">
-                <label for="apellidos" class="form-label">Apellidos</label>
-                <input type="text" required name="apellidos" id="apellidos" class="form-control" tabindex="2">
-            </div>
-            <!-- Campo para el correo electrónico -->
-            <div class="mb-3 col-12">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" required name="email" id="email" class="form-control" tabindex="3">
-            </div>
-            <!-- Campo para los intereses del usuario -->
-            <div class="mb-3 col-12">
-                <label for="comentario" class="form-label">Intereses</label>
-                <textarea name="comentario" id="comentario" class="form-control" tabindex="4"></textarea>
-            </div>
-            <!-- Campo para seleccionar la ciudad -->
-            <div class="mb-3 col-12">
-                <label for="ciudad" class="form-label">Ciudad</label>
-                <select name="ciudad" id="ciudad" class="form-select" tabindex="5">
-                    <option selected value="Seleccionar Ciudad">Seleccionar Ciudad</option>
-                    <option value="Arauca">Arauca</option>
-                    <option value="Armenia">Armenia</option>
-                    <option value="Barranquilla">Barranquilla</option>
-                    <option value="Bogotá">Bogotá</option>
-                    <option value="Bucaramanga">Bucaramanga</option>
-                    <option value="Cali">Cali</option>
-                    <option value="Cartagena">Cartagena</option>
-                    <option value="Cúcuta">Cúcuta</option>
-                    <option value="Florencia">Florencia</option>
-                    <option value="Ibagué">Ibagué</option>
-                    <option value="Inírida">Inírida</option>
-                    <option value="Leticia">Leticia</option>
-                    <option value="Manizales">Manizales</option>
-                    <option value="Medellín">Medellín</option>
-                    <option value="Mitú">Mitú</option>
-                    <option value="Mocoa">Mocoa</option>
-                    <option value="Montería">Montería</option>
-                    <option value="Neiva">Neiva</option>
-                    <option value="Pasto">Pasto</option>
-                    <option value="Pereira">Pereira</option>
-                    <option value="Popayán">Popayán</option>
-                    <option value="Puerto Carreño">Puerto Carreño</option>
-                    <option value="Quibdó">Quibdó</option>
-                    <option value="Riohacha">Riohacha</option>
-                    <option value="San Andrés">San Andrés</option>
-                    <option value="San José del Guaviare">San José del Guaviare</option>
-                    <option value="Santa Marta">Santa Marta</option>
-                    <option value="Sincelejo">Sincelejo</option>
-                    <option value="Tunja">Tunja</option>
-                    <option value="Valledupar">Valledupar</option>
-                    <option value="Villavicencio">Villavicencio</option>
-                    <option value="Yopal">Yopal</option>
-                </select>
-            </div>
-            <!-- Campo para la fecha de nacimiento -->
-            <div class="mb-3 col-12">
-                <label for="fecha" class="form-label">Fecha de nacimiento</label>
-                <input type="date" name="fecha" id="fecha" class="form-control" tabindex="6">
-            </div>
-            <!-- Campo para el presupuesto, con formato de miles -->
-            <div class="mb-3 col-12">
-                <label for="salario" class="form-label">Presupuesto</label>
-                <input type="text" name="salario" id="salario" class="form-control" tabindex="7" inputmode="numeric" pattern="[0-9.]*" autocomplete="off" placeholder="0">
-            </div>
+            <!-- Datos personales agrupados -->
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <!-- Campo para el nombre del usuario -->
+                <div class="mb-3 col-12">
+                    <label for="nombre" class="form-label">Nombre/s <span class="text-danger">*</span></label>
+                    <input type="text" required name="nombre" id="nombre" class="form-control" tabindex="1" accesskey="n" />
+                </div>
+                <!-- Campo para los apellidos del usuario -->
+                <div class="mb-3 col-12">
+                    <label for="apellidos" class="form-label">Apellidos <span class="text-danger">*</span></label>
+                    <input type="text" required name="apellidos" id="apellidos" class="form-control" tabindex="2" />
+                </div>
+                <!-- Campo para la edad (number) -->
+                <div class="mb-3 col-6">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="number" min="0" max="120" name="edad" id="edad" class="form-control" tabindex="3" placeholder="Ej: 30" />
+                </div>
+                <!-- Campo readonly de ejemplo -->
+                <div class="mb-3 col-6">
+                    <label for="usuario-id" class="form-label">ID de Usuario (readonly)</label>
+                    <input type="text" id="usuario-id" class="form-control" value="USR123456" readonly tabindex="4" />
+                </div>
+            </fieldset>
+            <!-- Contacto y ubicación agrupados -->
+            <fieldset>
+                <legend>Contacto y Ubicación</legend>
+                <!-- Campo para el correo electrónico -->
+                <div class="mb-3 col-12">
+                    <label for="email" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+                    <input type="email" required name="email" id="email" class="form-control" tabindex="5" />
+                </div>
+                <!-- Campo para seleccionar la ciudad con optgroup por departamento -->
+                <div class="mb-3 col-12">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <select name="ciudad" id="ciudad" class="form-select" tabindex="6">
+                        <option selected value="">Seleccionar Ciudad</option>
+                        <optgroup label="Amazonas">
+                            <option value="Leticia">Leticia</option>
+                            <option value="Inírida">Inírida</option>
+                        </optgroup>
+                        <optgroup label="Antioquia">
+                            <option value="Medellín">Medellín</option>
+                            <option value="Montería">Montería</option>
+                        </optgroup>
+                        <optgroup label="Cundinamarca">
+                            <option value="Bogotá">Bogotá</option>
+                            <option value="Soacha">Soacha</option>
+                        </optgroup>
+                        <optgroup label="Valle del Cauca">
+                            <option value="Cali">Cali</option>
+                            <option value="Palmira">Palmira</option>
+                        </optgroup>
+                        <optgroup label="Otros">
+                            <option value="Arauca">Arauca</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Barranquilla">Barranquilla</option>
+                            <option value="Cartagena">Cartagena</option>
+                            <option value="Cúcuta">Cúcuta</option>
+                            <option value="Florencia">Florencia</option>
+                            <option value="Ibagué">Ibagué</option>
+                            <option value="Manizales">Manizales</option>
+                            <option value="Mitú">Mitú</option>
+                            <option value="Mocoa">Mocoa</option>
+                            <option value="Neiva">Neiva</option>
+                            <option value="Pasto">Pasto</option>
+                            <option value="Pereira">Pereira</option>
+                            <option value="Popayán">Popayán</option>
+                            <option value="Puerto Carreño">Puerto Carreño</option>
+                            <option value="Quibdó">Quibdó</option>
+                            <option value="Riohacha">Riohacha</option>
+                            <option value="San Andrés">San Andrés</option>
+                            <option value="San José del Guaviare">San José del Guaviare</option>
+                            <option value="Santa Marta">Santa Marta</option>
+                            <option value="Sincelejo">Sincelejo</option>
+                            <option value="Tunja">Tunja</option>
+                            <option value="Valledupar">Valledupar</option>
+                            <option value="Villavicencio">Villavicencio</option>
+                            <option value="Yopal">Yopal</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Campo para la fecha de nacimiento -->
+                <div class="mb-3 col-12">
+                    <label for="fecha" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" required name="fecha" id="fecha" class="form-control" tabindex="7" />
+                </div>
+            </fieldset>
+            <!-- Preferencias y presupuesto agrupados -->
+            <fieldset>
+                <legend>Preferencias</legend>
+                <!-- Campo para los intereses del usuario -->
+                <div class="mb-3 col-12">
+                    <label for="comentario" class="form-label">Intereses</label>
+                    <textarea name="comentario" id="comentario" class="form-control" tabindex="8"></textarea>
+                </div>
+                <!-- Campo para el presupuesto, con formato de miles -->
+                <div class="mb-3 col-12">
+                    <label for="salario" class="form-label">Presupuesto</label>
+                    <input type="text" name="salario" id="salario" class="form-control" tabindex="9" inputmode="numeric" pattern="[0-9.]*" autocomplete="off" placeholder="0" />
+                </div>
+                <!-- Campo disabled de ejemplo -->
+                <div class="mb-3 col-12">
+                    <label for="promo-code" class="form-label">Código promocional (disabled)</label>
+                    <input type="text" id="promo-code" class="form-control" value="NO-APLICA" disabled tabindex="-1" />
+                </div>
+            </fieldset>
+            <!-- Género agrupado -->
+            <fieldset>
+                <legend>Género</legend>
+                <div class="mb-3 col-12 d-flex gap-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="genero-m" value="masculino" tabindex="10" />
+                        <label class="form-check-label" for="genero-m">Masculino</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="genero-f" value="femenino" tabindex="11" />
+                        <label class="form-check-label" for="genero-f">Femenino</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="genero-o" value="otro" tabindex="12" />
+                        <label class="form-check-label" for="genero-o">Otro</label>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Hobbies agrupados -->
+            <fieldset>
+                <legend>Hobbies</legend>
+                <div class="mb-3 col-12 d-flex flex-wrap gap-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-lectura" value="lectura" tabindex="13" />
+                        <label class="form-check-label" for="hobby-lectura">Lectura</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-deportes" value="deportes" tabindex="14" />
+                        <label class="form-check-label" for="hobby-deportes">Deportes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-musica" value="musica" tabindex="15" />
+                        <label class="form-check-label" for="hobby-musica">Música</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-viajes" value="viajes" tabindex="16" />
+                        <label class="form-check-label" for="hobby-viajes">Viajes</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Imagen de perfil -->
+            <fieldset>
+                <legend>Imagen de Perfil</legend>
+                <div class="mb-3 col-12">
+                    <label for="imagen" class="form-label">Subir foto (solo imágenes)</label>
+                    <input type="file" name="imagen" id="imagen" class="form-control" accept="image/*" tabindex="17" />
+                </div>
+            </fieldset>
+
             <!-- Botones para enviar y borrar el formulario -->
             <div class="mb-3 col-12 d-flex gap-3">
-                <input type="reset" value="Borrar datos" class="btn btn-custom-outline flex-fill" tabindex="8">
-                <input type="submit" value="Registrarme" class="btn btn-custom-primary flex-fill" tabindex="9">
+                <input type="reset" value="Borrar datos" class="btn btn-custom-outline flex-fill" tabindex="18" />
+                <input type="submit" value="Registrarme" class="btn btn-custom-primary flex-fill" tabindex="19" />
             </div>
             <!-- Botón para volver a la página principal -->
             <div class="mb-3 col-12">
-                <a href="index.html" class="btn btn-custom-secondary w-100" tabindex="10">Volver a la página principal</a>
+                <a href="index.html" class="btn btn-custom-secondary w-100" tabindex="20">Volver a la página principal</a>
             </div>
         </form>
     </main>
     <script>
         // Formatea el campo de presupuesto con puntos de miles automáticamente
         const salarioInput = document.getElementById('salario');
-        salarioInput.addEventListener('input', function(e) {
+        salarioInput.addEventListener('input', function (e) {
             let value = salarioInput.value.replace(/\./g, '').replace(/\D/g, '');
             if (value) {
                 salarioInput.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
